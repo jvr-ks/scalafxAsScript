@@ -46,6 +46,10 @@ ok:
 `as Java: java -cp 'C:/shared/scala-2.13.6/lib/*;scalafxTest.jar;lib/*'  Test` 
   
   
+##### Java 11 and ScalaFX  
+Java 11 has no integrated JavaFX but uses modules.  
+Use supplid "build.sbt" and javaFXlibDownload.bat  
+
 ##### Requirements  
 * Windows 10 build 17063 or later.  
 * Scala installed (not only SBT), take a look at "scalaDownload.bat"  

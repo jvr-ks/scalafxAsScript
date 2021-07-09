@@ -3,6 +3,7 @@
 // set JAVAFX_LIB first!
 // use runSBT.bat
 // https://repo1.maven.org/maven2/org/openjfx
+// https://repo1.maven.org/maven2/org/scalafx/
 
 ThisBuild / scalaVersion := "2.12.8"
 ThisBuild / version := "0.0.1"
@@ -31,11 +32,8 @@ lazy val root = (project in file("."))
 	.settings(
 		name := "openjfx-sbt",
 		libraryDependencies ++= Seq(
-			"org.scalafx" 								%% "scalafx" 						% "latest.integration",
-			"com.github.pathikrit"				%% "better-files"				% "latest.integration",
-			"com.lihaoyi"									%% "utest"							% "0.7.7"								% Test
+			"org.scalafx" %% "scalafx" % "latest.integration",
 		),
-
 		// scala-2.12.8: invoke javac directly since scalac does not yet support module syntax
 		// without --module-path, "error: module not found: javafx.controls" occurs on "requires javafx.controls"
 		Compile / unmanagedSourceDirectories -= (Compile / javaSource).value,
